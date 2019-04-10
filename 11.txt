@@ -1,0 +1,22 @@
+$(function () {
+    $(".moblie_none").hide();
+    $(".moblie_header .moblie_button").each(function(i){
+        $(this).click(function(){
+            $(".moblie_none").eq(i).slideToggle(500);
+        });
+    });
+
+
+    $(".moblie_none li>dl").hide();
+    $(".moblie_none_li").each(function (i) {
+        $(this).bind("click", function () {
+            if($('.moblie_none_li>dl').eq(i).is(':visible')){
+                $(".moblie_none_li>dl").eq(i).slideUp(300);
+            }else{
+                $(".moblie_none_li>dl").slideUp(300).eq(i).slideDown(300);
+            }
+        })
+    });
+
+
+})
